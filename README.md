@@ -48,6 +48,19 @@ npx serve .
 
 Then visit <http://localhost:8000>.
 
+## Deployment (GitHub Pages)
+
+The repo ships with a GitHub Actions workflow (`.github/workflows/pages.yml`)
+that deploys the site on every push to `main`.
+
+**One-time setup:** in the repository, go to **Settings → Pages → Build and
+deployment → Source** and select **GitHub Actions**. After that, each push to
+`main` publishes automatically; the live URL appears in the workflow run and
+under Settings → Pages.
+
+A `.nojekyll` file is included so Pages serves the files as-is without Jekyll
+processing.
+
 ## Editing content
 
 - **Brand copy** lives in the `#brands` section of `index.html`. Each brand is a

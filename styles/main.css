@@ -165,7 +165,7 @@ a { color: inherit; text-decoration: none; }
 }
 .brand__mark { color: var(--accent); display: inline-flex; }
 .brand__logo {
-  height: 42px; width: auto;
+  height: 38px; width: auto;
   display: block;
 }
 .brand__name {

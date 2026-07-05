@@ -1,10 +1,10 @@
-# RasVeda Labs — Website
+# Rasveda Labs — Website
 
-The official website for **RasVeda Labs**, a brand house and venture studio that
+The official website for **Rasveda Labs**, a brand house and venture studio that
 owns and operates a portfolio of consumer and technology brands at the
 intersection of sensory experience, science and everyday wellbeing.
 
-> **RasVeda** — from *rasa* (essence, flavour) and *veda* (knowledge):
+> **Rasveda** — from *rasa* (essence, flavour) and *veda* (knowledge):
 > *the knowledge of essence.*
 
 ## Portfolio

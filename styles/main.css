@@ -139,13 +139,12 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Header ---------- */
 .site-header {
-  /* Static (not sticky): the header scrolls away with the page, so there is
-     no glued strip / overscroll glitch on iOS Safari — the logo and menu
-     move normally and are always shown in full. */
+  /* No header bar: the logo and menu sit directly on the page background
+     (same black as the rest), static and part of the page flow. Nothing to
+     stick, overlap or slide under on iOS. */
   position: static;
-  z-index: 50;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
+  background: transparent;
+  border-bottom: none;
 }
 .header__inner {
   display: flex;

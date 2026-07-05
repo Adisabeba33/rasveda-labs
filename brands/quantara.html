@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantara — Market State Operating System · A Rasveda Labs brand</title>
+  <meta name="description" content="Quantara is a Market State Operating System — a causal, explainable pipeline that reads what markets are doing and why, traceable all the way down to raw OHLCV candles. A Rasveda Labs brand." />
+  <meta name="theme-color" content="#0a0b12" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Quantara — Market State Operating System" />
+  <meta property="og:description" content="The language of markets, not trading signals. Causal, explainable, deterministic — traceable down to raw candles." />
+  <meta property="og:site_name" content="Rasveda Labs" />
+  <meta property="og:image" content="../assets/quantara-logo.png" />
+
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/quantara.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="qu-topbar">
+    <div class="qu-container qu-topbar__inner">
+      <a class="qu-back" href="../index.html#brands"><span aria-hidden="true">←</span> Rasveda Labs</a>
+      <span class="qu-topbar__tag">Case study · Portfolio</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="qu-hero">
+      <svg class="qu-hero__chart" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="qline" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#5b8cff" stop-opacity="0"/>
+            <stop offset="0.3" stop-color="#5b8cff"/>
+            <stop offset="0.6" stop-color="#8b5cf6"/>
+            <stop offset="1" stop-color="#e05bd8"/>
+          </linearGradient>
+        </defs>
+        <g stroke="rgba(140,150,190,0.10)" stroke-width="1">
+          <line x1="0" y1="100" x2="1000" y2="100"/>
+          <line x1="0" y1="200" x2="1000" y2="200"/>
+          <line x1="0" y1="300" x2="1000" y2="300"/>
+        </g>
+        <path d="M0 300 L90 280 L180 300 L270 240 L360 260 L450 190 L540 210 L630 140 L720 165 L810 90 L900 120 L1000 60"
+              fill="none" stroke="url(#qline)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+
+      <div class="qu-container qu-hero__inner">
+        <div class="qu-hero__logo-panel reveal">
+          <img class="qu-hero__logo" src="../assets/quantara-logo.png"
+               alt="Quantara" width="300" height="300" />
+        </div>
+        <p class="qu-eyebrow qu-grad-text reveal">Market State Operating System</p>
+        <h1 class="qu-hero__title reveal">The language of markets, not trading signals.</h1>
+        <p class="qu-hero__lead reveal">
+          Not a bot. Not signals. Not a GPT wrapper over candles. Quantara analyses
+          market behaviour through causal, explainable events — answering
+          <em>what is happening, why, and what is likely next</em>, with a traceable
+          chain all the way down to raw OHLCV bars.
+        </p>
+
+        <dl class="qu-meta reveal" aria-label="Project details">
+          <div><dt>Role</dt><dd>Product owner + architect</dd></div>
+          <div><dt>Stack</dt><dd>Next.js 14 · TypeScript · Anthropic SDK · SQLite / IndexedDB</dd></div>
+          <div><dt>Status</dt><dd>Pipeline runs end-to-end</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- WHAT IT IS -->
+    <section class="qu-section">
+      <div class="qu-container qu-prose">
+        <span class="qu-kicker qu-grad-text reveal">What it is</span>
+        <h2 class="qu-h2 reveal">A different question than &ldquo;buy or sell.&rdquo;</h2>
+        <p class="reveal">
+          Every output can be unrolled backwards: <strong>scenario → transitions →
+          supporting events → L2 patterns → L1 detections → specific candles.</strong>
+          No black box, no GPT hallucinating in the analyser&rsquo;s seat — the model
+          writes narratives <em>on top of</em> state, it never invents the state.
+        </p>
+
+        <div class="qu-chain reveal" aria-label="Causal traceability chain">
+          <span class="qu-chain__node">scenario</span>
+          <span class="qu-chain__arrow" aria-hidden="true">→</span>
+          <span class="qu-chain__node">transitions</span>
+          <span class="qu-chain__arrow" aria-hidden="true">→</span>
+          <span class="qu-chain__node">events</span>
+          <span class="qu-chain__arrow" aria-hidden="true">→</span>
+          <span class="qu-chain__node">L2 patterns</span>
+          <span class="qu-chain__arrow" aria-hidden="true">→</span>
+          <span class="qu-chain__node">L1 detections</span>
+          <span class="qu-chain__arrow" aria-hidden="true">→</span>
+          <span class="qu-chain__node">raw candles</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="qu-section qu-section--tint">
+      <div class="qu-container">
+        <div class="qu-prose">
+          <span class="qu-kicker qu-grad-text reveal">Architecture</span>
+          <h2 class="qu-h2 reveal">A 5-layer event-sourced pipeline.</h2>
+        </div>
+
+        <div class="qu-layers">
+          <article class="qu-layer reveal">
+            <div class="qu-layer__tag qu-grad-text">L1<small>Detection</small></div>
+            <div class="qu-layer__body">
+              <b>Atomic events from OHLCV</b> — EMA crossings, ATR compression /
+              expansion, wick rejections, swings, breakout attempts, RSI thresholds.
+            </div>
+          </article>
+
+          <article class="qu-layer reveal">
+            <div class="qu-layer__tag qu-grad-text">L2<small>Composition</small></div>
+            <div class="qu-layer__body">
+              <b>Composite patterns</b> — <code>fake_breakout</code>,
+              <code>liquidity_sweep</code>, <code>absorption</code>,
+              <code>stop_run</code>, <code>rejection_at_level</code>,
+              <code>trend_pullback_complete</code>, RSI divergences.
+            </div>
+          </article>
+
+          <article class="qu-layer reveal">
+            <div class="qu-layer__tag qu-grad-text">L3<small>Structure</small></div>
+            <div class="qu-layer__body">
+              <b>Market regime</b> — bullish / bearish structure active, range active,
+              trend exhaustion — derived from the sequence of swings.
+            </div>
+          </article>
+
+          <article class="qu-layer reveal">
+            <div class="qu-layer__tag qu-grad-text">L4<small>Scenarios</small></div>
+            <div class="qu-layer__body">
+              <b>Hypotheses with confidence</b> — evidence accumulation, decay and
+              kill causes: <code>reversal_watch</code>, <code>breakout_watch</code>,
+              <code>mean_reversion</code>, <code>continuation</code>,
+              <code>range_test</code>.
+            </div>
+          </article>
+
+          <article class="qu-layer reveal">
+            <div class="qu-layer__tag qu-grad-text">AI<small>Narrative</small></div>
+            <div class="qu-layer__body">
+              <b>Streaming narratives via the Anthropic SDK</b> — running on top of
+              state, not replacing it.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGINEERING DECISIONS -->
+    <section class="qu-section">
+      <div class="qu-container">
+        <div class="qu-prose">
+          <span class="qu-kicker qu-grad-text reveal">Key decisions</span>
+          <h2 class="qu-h2 reveal">Engineering the determinism.</h2>
+        </div>
+
+        <div class="qu-grid">
+          <article class="qu-card reveal">
+            <h3>Full determinism</h3>
+            <p>Event and transition IDs are computed from the input. Identical candles → identical event log → identical scenario births. No hidden randomness, no wall-clock leakage.</p>
+          </article>
+          <article class="qu-card reveal">
+            <h3>Event sourcing</h3>
+            <p>Append-only journal of events and transitions; state is derived as a left fold — you can rewind to any point in history.</p>
+          </article>
+          <article class="qu-card reveal">
+            <h3>Streaming state compute</h3>
+            <p>Not batch — a five-phase per-event pipeline (decay → evidence → invalidation → births → structure), so a scenario can be born, weakened, killed and reborn within a single run.</p>
+          </article>
+          <article class="qu-card reveal">
+            <h3>Timeframe isolation</h3>
+            <p>Each timeframe is computed independently; multi-timeframe composition is a separate layer with explicit conflict resolution.</p>
+          </article>
+          <article class="qu-card reveal">
+            <h3>Dictionary discipline</h3>
+            <p>Every term has exactly one canonical, versioned definition. Changing a detector requires bumping the dictionary entry, which propagates as automatic cache invalidation via fingerprint.</p>
+          </article>
+          <article class="qu-card reveal">
+            <h3>Persistence-agnostic</h3>
+            <p>A unified <code>PersistenceAdapter</code> backs IndexedDB (browser) and better-sqlite3 (server, WAL mode). Cross-shard journal with deduplication.</p>
+          </article>
+          <article class="qu-card reveal">
+            <h3>End-to-end cancellation</h3>
+            <p>An <code>AbortController</code> propagates React → fetch → Next API route → Anthropic SDK. The Stop button actually stops the LLM within milliseconds.</p>
+          </article>
+          <article class="qu-card reveal">
+            <h3>NDJSON streaming</h3>
+            <p>Event stream from LLM to UI with proper back-pressure and graceful degradation on 503.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALIDATION -->
+    <section class="qu-section qu-section--tint">
+      <div class="qu-container">
+        <div class="qu-prose">
+          <span class="qu-kicker qu-grad-text reveal">Validation infrastructure</span>
+          <h2 class="qu-h2 reveal">Honest measurement, not pretty numbers.</h2>
+          <p class="reveal">A separate track focused on results that are statistically defensible, not just &ldquo;looks nice.&rdquo;</p>
+        </div>
+
+        <div class="qu-grid">
+          <article class="qu-card reveal">
+            <h3>Backtest runner</h3>
+            <p>A full matrix — 5 symbols × 3 timeframes × 3 lookback periods = 45 runs in one command.</p>
+          </article>
+          <article class="qu-card reveal">
+            <h3>Cross-report aggregator</h3>
+            <p>Guarded against Simpson&rsquo;s paradox: rates are recomputed from summed numerators and denominators, not averaged from per-report rates.</p>
+          </article>
+          <article class="qu-card reveal">
+            <h3>Edge analytics dashboard</h3>
+            <p>Leaderboard, confidence trajectory, cross-market consistency, regime split (trend / range / exhaustion / neutral) and failure analysis with dominant kill cause.</p>
+          </article>
+          <article class="qu-card reveal">
+            <h3>Null hypothesis test</h3>
+            <p>A geometric Brownian motion baseline that establishes the noise floor for interpreting confirm rates.</p>
+          </article>
+          <article class="qu-card reveal">
+            <h3>Pre-matrix audit</h3>
+            <p>Found and documented two structural biases (L1 swing look-ahead, target-before-stop in the outcome evaluator) with quantified magnitude <em>before</em> running real data.</p>
+          </article>
+        </div>
+
+        <!-- highlight -->
+        <div class="qu-highlight reveal">
+          <dl class="qu-highlight__stat">
+            <div><dt class="qu-grad-text">9 + 8</dt><dd>L1 detectors + L2 composers audited line-by-line</dd></div>
+            <div><dt class="qu-grad-text">0</dt><dd>real-data runs before the audit</dd></div>
+            <div><dt class="qu-grad-text">2</dt><dd>structural biases surfaced &amp; measured</dd></div>
+          </dl>
+          <p>
+            Most statistical pipelines aren&rsquo;t audited for look-ahead bias before the
+            first backtest — teams run the matrix, celebrate the pretty numbers, and
+            hit the bugs only when the numbers refuse to reproduce. Here, every
+            detector and the outcome evaluator were audited line by line, a null test
+            established the noise floor, and two biases were surfaced, measured and
+            documented inline. <strong>Only then does the matrix run.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="qu-section">
+      <div class="qu-container qu-prose">
+        <span class="qu-kicker qu-grad-text reveal">The build</span>
+        <h2 class="qu-h2 reveal">Stack.</h2>
+        <div class="qu-stack reveal">
+          <div class="qu-stack__row">
+            <span class="qu-stack__label">Frontend</span>
+            <ul class="qu-chips"><li>Next.js 14 App Router</li><li>TypeScript (strict)</li><li>React 18</li><li>Tailwind CSS 3.4</li></ul>
+          </div>
+          <div class="qu-stack__row">
+            <span class="qu-stack__label">Charts</span>
+            <ul class="qu-chips"><li>lightweight-charts 4.2</li><li>custom event markers</li><li>MTF composition</li></ul>
+          </div>
+          <div class="qu-stack__row">
+            <span class="qu-stack__label">AI</span>
+            <ul class="qu-chips"><li>Anthropic SDK 0.32.1</li><li>prompt caching</li><li>streaming</li><li>aggressive cancellation</li></ul>
+          </div>
+          <div class="qu-stack__row">
+            <span class="qu-stack__label">Persistence</span>
+            <ul class="qu-chips"><li>IndexedDB (client)</li><li>better-sqlite3 (server, WAL)</li></ul>
+          </div>
+          <div class="qu-stack__row">
+            <span class="qu-stack__label">Testing</span>
+            <ul class="qu-chips"><li>80+ smoke assertions</li><li>determinism</li><li>causality</li><li>timeframe isolation</li><li>cache-invalidation invariants</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATUS -->
+    <section class="qu-section qu-section--tint">
+      <div class="qu-container qu-prose">
+        <span class="qu-kicker qu-grad-text reveal">Status</span>
+        <div class="reveal"><span class="qu-status-badge">Pipeline runs end-to-end</span></div>
+        <h2 class="qu-h2 reveal">From candles to narrative.</h2>
+        <p class="reveal">
+          The full pipeline runs end-to-end, from candles to narrative. The
+          <code>/trading/analytics</code> dashboard exposes ~30 metrics per scenario
+          type with cross-report consolidation. Validation infrastructure is built
+          and verified; awaiting the full matrix pass on real market data.
+        </p>
+        <p class="qu-role reveal">
+          <strong>Role —</strong> Product owner + architect. Built in partnership with
+          an AI engineer through iterative collaboration: product direction and
+          invariants set by me, implementation and calibration push-back from the
+          partner.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="qu-cta">
+      <div class="qu-container">
+        <p class="qu-cta__mark qu-grad-text reveal">// what · why · next</p>
+        <h2 class="qu-cta__title reveal">Read the market&rsquo;s state, not its noise.</h2>
+        <a class="qu-btn reveal" href="../index.html#brands"><span aria-hidden="true">←</span> Back to the portfolio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="qu-footer">
+    <div class="qu-container qu-footer__inner">
+      <p>Quantara is a brand owned &amp; operated by <a href="../index.html">Rasveda Labs</a>.</p>
+      <p>&copy; <span id="year">2026</span> Rasveda Labs</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var items = document.querySelectorAll(".reveal");
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce || !("IntersectionObserver" in window)) {
+        items.forEach(function (el) { el.classList.add("is-visible"); });
+      } else {
+        var io = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("is-visible"); obs.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+        items.forEach(function (el) { io.observe(el); });
+      }
+      var y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

@@ -39,13 +39,17 @@ styles/<brand>.css      # One stylesheet per brand (its own identity)
 | **SŌMA** | ✅ | `brands/soma.html` | ✅ Next.js 15 · React 19 · Prisma/Postgres; deterministic taste engine (ENGINE_VERSION v9), **895** strains, real auth. **No OCR**; OpenAI optional & never scores | "Functional MVP · pre real-menu validation" |
 | **ingredients.help** | ✅ | `brands/ingredients.html` | ✅ Next.js 14 · React 18 · Supabase (optional); deterministic 20-rule interaction engine, 30 additives, "no data ≠ safe". No AI shipped | "Working MVP" |
 | **Daybreak** | ✅ | `brands/daybreak.html` | ✅ React 18 · Vite · PWA; client-side, tested habit core. Claude Haiku voice parsing is **optional (bring-your-own key)** | "MVP in personal testing" |
-| **Quantara** | ❌ **pulled** | `brands/quantara.html` (kept, **unlinked**) | ⚠️ Repo is **empty** — only a one-line `README.md` + `.gitignore`, one "Initial commit". The detailed engine on the page is **not in the repo** | — (removed from portfolio) |
+| **Quantara** | ✅ **restored** | `brands/quantara.html` | ✅ Full app on branch **`claude/build-quantara-app-lSA0Y`** (not yet on `main`): 9 L1 detectors, ~8 L2 composers, state/memory/aggregator/narrative engines, backtest + matrix runner (5 symbols × 3 TF × 3 lookback = 45), null-test, two independent audits, ~100 smoke checks. Anthropic SDK 0.32.1 · lightweight-charts 4.2.1 · better-sqlite3/IndexedDB — all match the page | "Pipeline runs end-to-end" |
 
-**Portfolio count is now 4** (hero stat + "Four distinct labels" copy). If Quantara
-gets real code (or the founder confirms it lives in a private/local repo), re-add its
-card to the `index.html` brand grid + footer, bump the counts back to 5, and re-link
-`brands/quantara.html` — but first correct that page's unverifiable specifics
-(e.g. "80+ smoke assertions", exact detector counts) against whatever code actually exists.
+**Portfolio count is 5.** Note on Quantara: it was briefly pulled mid-session when the
+repo held only a stub `README` on `main`; a **parallel session then pushed the full
+engine** to `claude/build-quantara-app-lSA0Y`, so it was restored. The case-study page
+was verified accurate against that branch's code (detector counts, matrix dimensions,
+smoke counts, dependency versions all line up). **The Quantara code still lives on a
+feature branch, not `main`** — if you want the page's "Live"/"end-to-end" framing to
+map to a deployed product, that branch needs merging + hosting. A file
+`quantara-portfolio-en.md` was seen being authored in the parallel session; fold it in
+if/when it lands on a branch.
 
 ---
 
@@ -60,7 +64,8 @@ card to the `index.html` brand grid + footer, bump the counts back to 5, and re-
    encoded interactions (benzoate + vitamin C → benzene; guar + xanthan synergy).
    Home card + footer link wired.
 3. **Corrected the other pages** where code contradicted copy — see the table above.
-4. **Pulled Quantara** from the portfolio (empty repo); page kept but unlinked.
+4. **Quantara:** pulled when its repo was a stub, then **restored** once the full
+   engine appeared on `claude/build-quantara-app-lSA0Y`; page verified against that code.
 5. Verified every page with a headless-Chromium full-page screenshot.
 
 ---
@@ -118,7 +123,8 @@ fonts load fine on the live site).
 - Do **not** put model identifiers in PR titles/bodies/commit messages.
 
 ## Nice-to-haves / backlog
-- Quantara: build (or locate) the real engine, then restore its portfolio card.
+- Quantara: merge `claude/build-quantara-app-lSA0Y` to `main` and host it so the
+  case-study page's "runs end-to-end" claim maps to a live deployment.
 - Custom domain (e.g. `rasveda.com`).
 - Per-project "Available for acquisition" one-pagers (founder is exploring selling
   matured MVPs — but the immediate priority is growing users, not selling).

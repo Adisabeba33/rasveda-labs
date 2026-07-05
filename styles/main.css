@@ -165,10 +165,8 @@ a { color: inherit; text-decoration: none; }
 }
 .brand__mark { color: var(--accent); display: inline-flex; }
 .brand__logo {
-  width: 34px; height: 34px;
+  height: 42px; width: auto;
   display: block;
-  border-radius: 8px;
-  object-fit: cover;
 }
 .brand__name {
   font-family: var(--font-serif);
@@ -454,10 +452,9 @@ a { color: inherit; text-decoration: none; }
   justify-content: space-between;
 }
 .footer__logo {
-  width: clamp(160px, 40vw, 200px);
+  width: clamp(170px, 42vw, 210px);
   height: auto;
   display: block;
-  border-radius: 10px;   /* logo ships on its own near-black backdrop */
 }
 .footer__brand p { color: var(--text-dim); margin: 1rem 0 0; font-style: italic; }
 .footer__nav { display: flex; gap: clamp(2.5rem, 6vw, 5rem); flex-wrap: wrap; }

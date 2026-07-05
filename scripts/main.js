@@ -1,4 +1,4 @@
-/* RasVeda Labs — main.js
+/* Rasveda Labs — main.js
    Small progressive enhancements: mobile nav, scroll reveal,
    sticky-header state and current year. No dependencies. */
 

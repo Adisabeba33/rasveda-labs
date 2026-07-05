@@ -139,15 +139,13 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Header ---------- */
 .site-header {
-  position: sticky;
-  top: 0;
+  /* Static (not sticky): the header scrolls away with the page, so there is
+     no glued strip / overscroll glitch on iOS Safari — the logo and menu
+     move normally and are always shown in full. */
+  position: static;
   z-index: 50;
-  /* Solid (no backdrop-blur): avoids the iOS Safari translucent-band /
-     content-clipping glitch when the browser toolbar collapses. */
   background: var(--bg);
   border-bottom: 1px solid var(--line);
-  /* Keep content clear of the notch / status-bar safe area. */
-  padding-top: env(safe-area-inset-top, 0px);
 }
 .header__inner {
   display: flex;

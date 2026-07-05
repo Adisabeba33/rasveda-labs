@@ -63,7 +63,7 @@
         <dl class="so-meta reveal" aria-label="Project details">
           <div><dt>Role</dt><dd>Product · Brand · Design · Full-stack engineering</dd></div>
           <div><dt>Stack</dt><dd>Next.js 15 · React 19 · TypeScript · Prisma / Postgres</dd></div>
-          <div><dt>Year</dt><dd>2025 – 2026</dd></div>
+          <div><dt>Status</dt><dd>Functional MVP · pre real-menu validation</dd></div>
         </dl>
       </div>
     </section>
@@ -122,9 +122,10 @@
             <span class="so-card__idx">03</span>
             <h3>Menu analysis</h3>
             <p>
-              Paste a dispensary menu — or upload a photo, OCR&rsquo;d automatically —
-              and get a ranked #1 / #2 / #3 board plus the full list, each row
-              expandable into the analysis, with a compare-two side-by-side view.
+              Paste a dispensary menu as text — a deterministic parser pulls out
+              grower, THC, price and weight — and get a ranked #1 / #2 / #3 board plus
+              the full list, each row expandable into the analysis, with a compare-two
+              side-by-side view.
             </p>
           </article>
 
@@ -142,9 +143,10 @@
             <span class="so-card__idx">05</span>
             <h3>Harvest</h3>
             <p>
-              An editorial catalog of 888 curated strains — hand-drawn poster art,
-              sommelier-style curator notes, lineage, market aliases and a sensory
-              family taxonomy, all in the language the engine reads from.
+              An editorial catalog of 895 curated strains — sommelier-style curator
+              notes, lineage, market aliases and a sensory family taxonomy (all in the
+              language the engine reads from), with hand-drawn poster art for the
+              headline strains.
             </p>
           </article>
 
@@ -209,12 +211,12 @@
 
           <article class="so-card reveal">
             <span class="so-card__idx">C</span>
-            <h3>888-strain catalog performance</h3>
+            <h3>895-strain catalog performance</h3>
             <p>
               First paint started in &ldquo;did it freeze?&rdquo; territory. Fix: cache the
-              assembled catalog (~789K comparisons no longer paid per cold start),
-              trim the per-card payload by 88%, paginate to 40 cards with
-              IntersectionObserver infinite scroll, and add an instant skeleton.
+              assembled catalog (hundreds of thousands of comparisons no longer paid
+              per cold start), trim the per-card payload sharply, paginate to 40 cards
+              with IntersectionObserver infinite scroll, and add an instant skeleton.
             </p>
           </article>
 
@@ -256,7 +258,7 @@
           <li>Frosted-cream cards</li>
           <li>Embossed leaf backdrop</li>
           <li>Per-strain poster art</li>
-          <li>Curator notes on 888 strains</li>
+          <li>Curator notes on 895 strains</li>
         </ul>
       </div>
     </section>
@@ -268,13 +270,16 @@
         <h2 class="so-h2 reveal">Stack.</h2>
         <p class="reveal">
           Next.js 15 (App Router · React 19 · Server Components) with TypeScript
-          and Tailwind. Prisma over PostgreSQL (Supabase); OpenAI for menu OCR and
-          description parsing; Playwright for visual-regression and screenshots.
+          and Tailwind. Prisma over PostgreSQL (Supabase); custom scrypt + HMAC-cookie
+          auth (no auth library). OpenAI is <em>optional</em> — it only rewrites the
+          written verdicts and infers off-catalog strain names; it never touches the
+          scores. Tested with Node&rsquo;s built-in test runner plus a stress harness
+          that guards against &ldquo;the illusion of intelligence.&rdquo;
         </p>
         <div class="so-stack reveal" aria-label="Technologies">
           <span>Next.js 15</span><span>React 19</span><span>TypeScript</span>
           <span>Tailwind CSS</span><span>Prisma</span><span>PostgreSQL · Supabase</span>
-          <span>OpenAI</span><span>Playwright</span><span>lucide-react</span>
+          <span>OpenAI (optional)</span><span>node:test</span><span>lucide-react</span>
         </div>
       </div>
     </section>

@@ -109,9 +109,10 @@
           <article class="db-card reveal">
             <h3>Voice → structure</h3>
             <p>
-              Speech recognition in 12 languages plus semantic parsing via
-              Claude Haiku 4.5. The secretary orders the day by importance and
-              faithfully honours explicit positions.
+              On-device speech recognition in 12 languages, with optional AI parsing
+              via Claude Haiku 4.5 (enabled with your own Anthropic key). When on, the
+              secretary orders the day by importance and honours explicit positions;
+              when off, each spoken phrase simply becomes a card — no input is ever lost.
             </p>
           </article>
 
@@ -184,12 +185,13 @@
         <span class="db-kicker reveal">Under the hood</span>
         <h2 class="db-h2 reveal">Tech.</h2>
         <p class="reveal">
-          React 18 + TypeScript + Vite. Local storage (localStorage) and IndexedDB
-          for audio; the Web Speech API and MediaRecorder for capture;
-          drag-and-drop via <code>@dnd-kit</code>; the Anthropic SDK
-          (Claude Haiku 4.5) for parsing. Shipped as a PWA — installable,
-          offline-capable, with a self-updating service worker and CI/CD
-          deployment.
+          React 18 + TypeScript + Vite — fully client-side, no backend. Local storage
+          (localStorage) for state and IndexedDB for audio; the Web Speech API and
+          MediaRecorder for capture; drag-and-drop via <code>@dnd-kit</code>; an
+          optional Anthropic SDK (Claude Haiku 4.5) parsing layer, gated behind your
+          own API key. The habit logic (streaks, carry-over, progress) is pure and
+          unit-tested. Shipped as a PWA — installable, offline-capable, with a
+          self-updating service worker and CI/CD deployment.
         </p>
 
         <div class="db-stack reveal" aria-label="Technologies">

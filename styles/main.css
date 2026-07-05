@@ -142,14 +142,12 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 50;
-  backdrop-filter: blur(14px);
-  background: rgba(14, 12, 10, 0.72);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
-}
-.site-header.is-scrolled {
-  border-bottom-color: var(--line);
-  background: rgba(14, 12, 10, 0.9);
+  /* Solid (no backdrop-blur): avoids the iOS Safari translucent-band /
+     content-clipping glitch when the browser toolbar collapses. */
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  /* Keep content clear of the notch / status-bar safe area. */
+  padding-top: env(safe-area-inset-top, 0px);
 }
 .header__inner {
   display: flex;

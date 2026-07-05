@@ -1,5 +1,5 @@
 /* =========================================================
-   ingredients.help — "Soft Laboratory"
+   Ingredient.help — "Soft Laboratory"
    Case-study page for the Rasveda Labs portfolio
    Palette + type mirror the real product brand.
    ========================================================= */
@@ -355,8 +355,9 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--ig-serif);
   font-weight: 600;
   font-size: clamp(2rem, 5vw, 3.2rem);
-  margin: 0 0 2rem; letter-spacing: -0.015em;
+  margin: 0 0 0.9rem; letter-spacing: -0.015em;
 }
+.ig-cta__lead { color: var(--ig-ink-soft); margin: 0 0 2rem; }
 .ig-btn {
   display: inline-flex; align-items: center; gap: 0.5em;
   padding: 0.85em 1.6em; border-radius: 999px;
@@ -367,6 +368,18 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.25s var(--ig-ease), box-shadow 0.25s var(--ig-ease);
 }
 .ig-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -12px rgba(64, 105, 58, 0.8); }
+.ig-btn-ghost {
+  display: inline-flex; align-items: center; gap: 0.5em;
+  padding: 0.85em 1.6em; border-radius: 999px;
+  font-weight: 600; font-family: var(--ig-sans);
+  color: var(--ig-ink); border: 1px solid var(--ig-line);
+  transition: border-color 0.25s var(--ig-ease), color 0.25s var(--ig-ease);
+}
+.ig-btn-ghost:hover { border-color: var(--ig-sage); color: var(--ig-sage-deep); }
+.ig-hero__actions, .ig-cta__actions {
+  display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center;
+}
+.ig-hero__actions { margin: 1.9rem 0 0; }
 
 /* ---------- Footer ---------- */
 .ig-footer {

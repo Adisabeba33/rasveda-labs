@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Laboratory — A dictionary for things never named · A Rasveda Labs brand</title>
+  <meta name="description" content="Word Laboratory is a dictionary for things humanity has felt but never named. It reads the deep meaning of a request first, then invents a new word for it that can be used inside an existing language (English, Russian). Meaning first, word last. A Rasveda Labs brand." />
+  <meta name="theme-color" content="#100a12" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Word Laboratory — A dictionary for things never named" />
+  <meta property="og:description" content="Describe what language cannot yet express. The laboratory discovers the concept, invents a word for it, and shows you how to use it in a sentence." />
+  <meta property="og:site_name" content="Rasveda Labs" />
+
+  <link rel="icon" type="image/png" href="../assets/rasveda-favicon.png?v=3" />
+  <link rel="apple-touch-icon" href="../assets/rasveda-icon.png?v=3" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/word-laboratory.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="wl-topbar">
+    <div class="wl-container wl-topbar__inner">
+      <a class="wl-back" href="../index.html#brands"><span aria-hidden="true">←</span> Rasveda Labs</a>
+      <span class="wl-topbar__tag">Case study · Portfolio</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="wl-hero">
+      <div class="wl-container wl-hero__inner">
+        <p class="wl-eyebrow wl-grad-text reveal">Word Laboratory · Semantic instrument</p>
+        <h1 class="wl-hero__title reveal">A dictionary for things humanity has felt but never named.</h1>
+        <p class="wl-hero__lead reveal">
+          Describe what language cannot yet express. The laboratory reads the
+          <em>deep meaning</em> of the request first, then invents a new word for it —
+          one that can actually be spoken <em>inside an existing language</em>. It does
+          not replace English or Russian; it expands them where ordinary vocabulary
+          runs out.
+        </p>
+
+        <!-- the invented word, set as a dictionary headword -->
+        <figure class="wl-headword reveal">
+          <span class="wl-headword__word wl-grad-text">varethis</span>
+          <span class="wl-headword__ipa">/vah-REH-this · варетис/</span>
+          <span class="wl-headword__pos">noun · constructed</span>
+          <p class="wl-headword__def">
+            The irreversible becoming of someone new after surviving what should have
+            destroyed you — the death of a former self without physical death.
+          </p>
+          <p class="wl-headword__use">
+            &ldquo;I did not recover. I entered <b>varethis</b>.&rdquo; &nbsp;·&nbsp;
+            «я прошёл через <b>варетис</b>.»
+          </p>
+        </figure>
+
+        <div class="wl-hero__actions reveal">
+          <span class="wl-wip"><span class="wl-wip__dot" aria-hidden="true"></span> Site under development</span>
+          <a class="wl-btn-ghost" href="../index.html#brands"><span aria-hidden="true">←</span> Portfolio</a>
+        </div>
+
+        <dl class="wl-meta reveal" aria-label="Project details">
+          <div><dt>Role</dt><dd>Product owner + architect</dd></div>
+          <div><dt>Stack</dt><dd>React 18 · Vite · TypeScript · Anthropic SDK · Vercel functions</dd></div>
+          <div><dt>Status</dt><dd>Engine + LLM passes run end-to-end</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- WHAT IT IS -->
+    <section class="wl-section">
+      <div class="wl-container wl-prose">
+        <span class="wl-kicker wl-grad-text reveal">What it is</span>
+        <h2 class="wl-h2 reveal">Meaning first, word last.</h2>
+        <p class="reveal">
+          Word Laboratory is <strong>not</strong> a random word generator, a
+          fantasy-language builder, or an AI name generator. The most important object
+          in the product is the <strong>Concept</strong> — the meaning being named — not
+          the word and not the language. The word is only a vessel; the phonetic system
+          decides how that vessel sounds.
+        </p>
+        <p class="reveal">
+          So the generation order is <em>always</em> the same, and it never runs
+          backwards. If the interpretation of the request is wrong, everything
+          downstream is wrong — which is why the lab states its reading of the meaning
+          <strong>before</strong> it makes a single word.
+        </p>
+
+        <div class="wl-chain reveal" aria-label="Generation order">
+          <span class="wl-chain__node wl-chain__node--first">Meaning</span>
+          <span class="wl-chain__arrow" aria-hidden="true">→</span>
+          <span class="wl-chain__node">Concept</span>
+          <span class="wl-chain__arrow" aria-hidden="true">→</span>
+          <span class="wl-chain__node">Emotional identity</span>
+          <span class="wl-chain__arrow" aria-hidden="true">→</span>
+          <span class="wl-chain__node">Sound architecture</span>
+          <span class="wl-chain__arrow" aria-hidden="true">→</span>
+          <span class="wl-chain__node">Word</span>
+          <span class="wl-chain__arrow" aria-hidden="true">→</span>
+          <span class="wl-chain__node wl-chain__node--last">Use in language</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIPELINE -->
+    <section class="wl-section wl-section--tint">
+      <div class="wl-container">
+        <div class="wl-prose">
+          <span class="wl-kicker wl-grad-text reveal">The pipeline</span>
+          <h2 class="wl-h2 reveal">From a single sentence to a usable word.</h2>
+          <p class="reveal">
+            The user gets <strong>one free-text field</strong> — &ldquo;describe a
+            meaning.&rdquo; Results render immediately from a deterministic engine, then,
+            if the language model is configured, bespoke per-word meanings and usage
+            sentences swap in progressively on top.
+          </p>
+        </div>
+
+        <div class="wl-layers">
+          <article class="wl-layer reveal">
+            <div class="wl-layer__tag wl-grad-text">01<small>Meaning</small></div>
+            <div class="wl-layer__body">
+              <b>Meaning Analysis</b> — reads the prompt and recovers the real centre.
+              For &ldquo;becoming someone different after surviving destruction&rdquo; it
+              refuses surface words like <em>light</em> or <em>energy</em> and names the
+              hidden idea: <em>irreversible identity transformation.</em>
+            </div>
+          </article>
+
+          <article class="wl-layer reveal">
+            <div class="wl-layer__tag wl-grad-text">02<small>Interpretation</small></div>
+            <div class="wl-layer__body">
+              <b>Laboratory interpretation</b> — an EN/RU reading of the request, its
+              hidden concepts and a concept network the user can recognise, accept or
+              gently steer.
+            </div>
+          </article>
+
+          <article class="wl-layer reveal">
+            <div class="wl-layer__tag wl-grad-text">03<small>Discovery</small></div>
+            <div class="wl-layer__body">
+              <b>Language discovery</b> — several distinct &ldquo;linguistic species&rdquo;
+              are chosen <em>by the meaning</em>, each a self-consistent sound world with a
+              measurable <b>Language Genome</b>.
+            </div>
+          </article>
+
+          <article class="wl-layer reveal">
+            <div class="wl-layer__tag wl-grad-text">04<small>Synthesis</small></div>
+            <div class="wl-layer__body">
+              <b>Word synthesis</b> — native-speaker words built from each language's
+              phonotactics. Phonetically diverse by design — not twelve suffix mutations
+              of one root.
+            </div>
+          </article>
+
+          <article class="wl-layer reveal">
+            <div class="wl-layer__tag wl-grad-text">05<small>Passport</small></div>
+            <div class="wl-layer__body">
+              <b>Word Passport</b> — meaning, stress-marked pronunciation, Cyrillic
+              transliteration, part of speech, natural EN/RU example sentences, Word
+              Genome, Emotional DNA and brand fit.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGINEERING -->
+    <section class="wl-section">
+      <div class="wl-container">
+        <div class="wl-prose">
+          <span class="wl-kicker wl-grad-text reveal">Key decisions</span>
+          <h2 class="wl-h2 reveal">A pure engine with a single seam.</h2>
+        </div>
+
+        <div class="wl-grid">
+          <article class="wl-card reveal">
+            <h3>Framework-agnostic engine</h3>
+            <p>The whole meaning-first pipeline lives in pure TypeScript — no React, no DOM, no network. The UI and the LLM depend on the engine; the engine never depends on them.</p>
+          </article>
+          <article class="wl-card reveal">
+            <h3>One seam for the LLM</h3>
+            <p><code>analyzeMeaning()</code> is the single function a language model replaces. Whatever it returns must fit the exact <code>MeaningAnalysis</code> shape the engine already consumes, so everything downstream is unchanged.</p>
+          </article>
+          <article class="wl-card reveal">
+            <h3>Always works without the LLM</h3>
+            <p>Every model call has a deterministic fallback. If no key is set the API returns <code>501</code> and the client quietly falls back to the built-in engine — the product never breaks.</p>
+          </article>
+          <article class="wl-card reveal">
+            <h3>Key never reaches the browser</h3>
+            <p><code>ANTHROPIC_API_KEY</code> lives only on the server, inside Vercel functions. The client sees results, never credentials.</p>
+          </article>
+          <article class="wl-card reveal">
+            <h3>Deterministic &amp; shareable</h3>
+            <p>Engine output is deterministic per seed — same request, same words. No <code>Date.now()</code> or <code>Math.random()</code> in the engine; a seeded mulberry32 RNG makes every run reproducible.</p>
+          </article>
+          <article class="wl-card reveal">
+            <h3>Progressive enhancement</h3>
+            <p>Deterministic results paint first; bespoke per-word meanings and usage sentences stream in afterwards. Fast by default, deep when the model is on.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HONESTY -->
+    <section class="wl-section wl-section--tint">
+      <div class="wl-container">
+        <div class="wl-prose">
+          <span class="wl-kicker wl-grad-text reveal">Honesty rules</span>
+          <h2 class="wl-h2 reveal">Mysterious on the surface, honest underneath.</h2>
+          <p class="reveal">
+            The interface can feel like alchemy, but the system refuses to fake the
+            things a user would trust it on. Three lines are never crossed.
+          </p>
+        </div>
+
+        <div class="wl-grid">
+          <article class="wl-card reveal">
+            <h3>No fake etymology</h3>
+            <p>A newly invented word does not historically descend from Greek or Latin. The lab says &ldquo;constructed using phonetic patterns associated with…&rdquo; — never &ldquo;comes from Ancient Greek.&rdquo;</p>
+          </article>
+          <article class="wl-card reveal">
+            <h3>No fake precision</h3>
+            <p>No invented 97% / 100% scores on everything. Qualitative bands (Low / Moderate / High / Exceptional) unless there's a real basis — and it states plainly when a check hasn't been run yet.</p>
+          </article>
+          <article class="wl-card reveal">
+            <h3>Labelled sources</h3>
+            <p>An AI-read interpretation carries a &ldquo;Read by AI&rdquo; badge, distinct from the deterministic built-in engine. The user always knows which one spoke.</p>
+          </article>
+        </div>
+
+        <div class="wl-highlight reveal">
+          <dl class="wl-highlight__stat">
+            <div><dt class="wl-grad-text">2</dt><dd>living languages served — EN + RU</dd></div>
+            <div><dt class="wl-grad-text">12</dt><dd>linguistic species in the engine</dd></div>
+            <div><dt class="wl-grad-text">36</dt><dd>engine tests kept green</dd></div>
+          </dl>
+          <p>
+            Every invented word ships with a spoken pronunciation guide and a Cyrillic
+            transliteration, so it can live in Russian as naturally as in English. The
+            real bar isn't raw originality — it is <strong>speech adoption:</strong> can
+            this word actually enter a human sentence? That is what the &ldquo;Use in
+            Language&rdquo; section exists to prove.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="wl-section">
+      <div class="wl-container wl-prose">
+        <span class="wl-kicker wl-grad-text reveal">The build</span>
+        <h2 class="wl-h2 reveal">Stack.</h2>
+        <div class="wl-stack reveal">
+          <div class="wl-stack__row">
+            <span class="wl-stack__label">Frontend</span>
+            <ul class="wl-chips"><li>React 18</li><li>TypeScript (strict)</li><li>Vite 5</li><li>single free-text input</li></ul>
+          </div>
+          <div class="wl-stack__row">
+            <span class="wl-stack__label">Engine</span>
+            <ul class="wl-chips"><li>pure TypeScript</li><li>no DOM / no network</li><li>seeded mulberry32 RNG</li><li>deterministic</li></ul>
+          </div>
+          <div class="wl-stack__row">
+            <span class="wl-stack__label">AI</span>
+            <ul class="wl-chips"><li>Anthropic SDK</li><li>Haiku 4.5 by default</li><li>graceful fallback</li><li>server-only key</li></ul>
+          </div>
+          <div class="wl-stack__row">
+            <span class="wl-stack__label">Serverless</span>
+            <ul class="wl-chips"><li>Vercel functions</li><li><code>/api/analyze</code></li><li><code>/api/meanings</code></li><li>maxDuration 60s</li></ul>
+          </div>
+          <div class="wl-stack__row">
+            <span class="wl-stack__label">Testing</span>
+            <ul class="wl-chips"><li>Vitest engine suite</li><li>determinism</li><li>meaning-first order</li><li>phonetic diversity</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATUS -->
+    <section class="wl-section wl-section--tint">
+      <div class="wl-container wl-prose">
+        <span class="wl-kicker wl-grad-text reveal">Status</span>
+        <div class="reveal"><span class="wl-status-badge">Engine + LLM passes run end-to-end</span></div>
+        <h2 class="wl-h2 reveal">From meaning to a word you can say.</h2>
+        <p class="reveal">
+          The meaning-first engine, language discovery, genomes and Word Passports are
+          done, the serverless LLM meaning analysis runs with a graceful fallback, and
+          bespoke per-word meanings, pronunciation guides, Cyrillic transliteration and
+          natural EN/RU usage sentences all ship today. Next on the roadmap: independent
+          phonetic strategies, a transparent adoption test, and a personal lexicon to
+          save discovered concepts.
+        </p>
+        <p class="wl-role reveal">
+          <strong>Role —</strong> Product owner + architect. Built in partnership with an
+          AI engineer through iterative collaboration: product direction, the
+          meaning-first invariants and the honesty rules set by me; implementation and
+          calibration from the partner.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="wl-cta">
+      <div class="wl-container">
+        <p class="wl-cta__mark wl-grad-text reveal">// meaning · concept · word</p>
+        <h2 class="wl-cta__title reveal">Describe what language cannot yet express.</h2>
+        <p class="wl-cta__lead reveal">
+          <span class="wl-wip"><span class="wl-wip__dot" aria-hidden="true"></span> Site under development</span>
+        </p>
+        <a class="wl-btn reveal" href="../index.html#brands"><span aria-hidden="true">←</span> Back to the portfolio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wl-footer">
+    <div class="wl-container wl-footer__inner">
+      <p>Word Laboratory is a brand owned &amp; operated by <a href="../index.html">Rasveda Labs</a>.</p>
+      <p>&copy; <span id="year">2026</span> Rasveda Labs</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var items = document.querySelectorAll(".reveal");
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce || !("IntersectionObserver" in window)) {
+        items.forEach(function (el) { el.classList.add("is-visible"); });
+      } else {
+        var io = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("is-visible"); obs.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+        items.forEach(function (el) { io.observe(el); });
+      }
+      var y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

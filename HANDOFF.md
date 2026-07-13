@@ -40,8 +40,9 @@ styles/<brand>.css      # One stylesheet per brand (its own identity)
 | **ingredients.help** | ✅ | `brands/ingredients.html` | ✅ Next.js 14 · React 18 · Supabase (optional); deterministic 20-rule interaction engine, 30 additives, "no data ≠ safe". No AI shipped | "Working MVP" |
 | **Daybreak** | ✅ | `brands/daybreak.html` | ✅ React 18 · Vite · PWA; client-side, tested habit core. Claude Haiku voice parsing is **optional (bring-your-own key)** | "MVP in personal testing" |
 | **Quantara** | ✅ **restored** | `brands/quantara.html` | ✅ Full app on branch **`claude/build-quantara-app-lSA0Y`** (not yet on `main`): 9 L1 detectors, ~8 L2 composers, state/memory/aggregator/narrative engines, backtest + matrix runner (5 symbols × 3 TF × 3 lookback = 45), null-test, two independent audits, ~100 smoke checks. Anthropic SDK 0.32.1 · lightweight-charts 4.2.1 · better-sqlite3/IndexedDB — all match the page | "Pipeline runs end-to-end" |
+| **Word Laboratory** | ✅ | `brands/word-laboratory.html` | ✅ Repo **`name-laboratory`** (v0.6.0): pure-TS meaning-first engine (single `analyzeMeaning()` seam, seeded mulberry32 RNG, 36 vitest tests), React 18 · Vite 5 client, Vercel functions `/api/analyze` + `/api/meanings` (Anthropic SDK, Haiku 4.5 default, server-only key, graceful fallback). Honesty rules on the page match the repo's own | "Site under development" |
 
-**Portfolio count is 5.** Note on Quantara: it was briefly pulled mid-session when the
+**Portfolio count is 6.** Note on Quantara: it was briefly pulled mid-session when the
 repo held only a stub `README` on `main`; a **parallel session then pushed the full
 engine** to `claude/build-quantara-app-lSA0Y`, so it was restored. The case-study page
 was verified accurate against that branch's code (detector counts, matrix dimensions,

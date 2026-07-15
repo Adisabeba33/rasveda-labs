@@ -129,7 +129,9 @@
               <b>Meaning Analysis</b> — reads the prompt and recovers the real centre.
               For &ldquo;becoming someone different after surviving destruction&rdquo; it
               refuses surface words like <em>light</em> or <em>energy</em> and names the
-              hidden idea: <em>irreversible identity transformation.</em>
+              hidden idea: <em>irreversible identity transformation.</em> It also detects
+              the <em>kind</em> of thing being named — a moment, a feeling, a person, a
+              principle — so a related-but-wrong candidate can't outrank the right one.
             </div>
           </article>
 
@@ -143,31 +145,61 @@
           </article>
 
           <article class="wl-layer reveal">
-            <div class="wl-layer__tag wl-grad-text">03<small>Discovery</small></div>
+            <div class="wl-layer__tag wl-grad-text">03<small>Search</small></div>
+            <div class="wl-layer__body">
+              <b>Semantic Gap Search</b> — before inventing anything, the lab asks
+              <em>does language already have a word for this?</em> A reverse-dictionary
+              pass names the closest existing words and phrases, what each covers and
+              misses, and an honest verdict — so a new word is only minted where a real
+              gap exists.
+            </div>
+          </article>
+
+          <article class="wl-layer reveal">
+            <div class="wl-layer__tag wl-grad-text">04<small>Discovery</small></div>
             <div class="wl-layer__body">
               <b>Language discovery</b> — several distinct &ldquo;linguistic species&rdquo;
               are chosen <em>by the meaning</em>, each a self-consistent sound world with a
-              measurable <b>Language Genome</b>.
+              measurable <b>Language Genome</b>. A species whose worldview can't hold the
+              concept may <em>decline to translate</em> rather than force a word that lies.
             </div>
           </article>
 
           <article class="wl-layer reveal">
-            <div class="wl-layer__tag wl-grad-text">04<small>Synthesis</small></div>
+            <div class="wl-layer__tag wl-grad-text">05<small>Evolution</small></div>
             <div class="wl-layer__body">
-              <b>Word synthesis</b> — native-speaker words built from each language's
-              phonotactics. Phonetically diverse by design — not twelve suffix mutations
-              of one root.
+              <b>Breed &amp; select</b> — not &ldquo;we generated N words.&rdquo; Each
+              language breeds a population of hundreds of candidate forms, then selection
+              pressure (naturalness, collision, speakability) kills most of them. The
+              survivors are named, with an honest census of how many were bred, rejected
+              and kept.
             </div>
           </article>
 
           <article class="wl-layer reveal">
-            <div class="wl-layer__tag wl-grad-text">05<small>Passport</small></div>
+            <div class="wl-layer__tag wl-grad-text">06<small>Passport</small></div>
             <div class="wl-layer__body">
               <b>Word Passport</b> — meaning, stress-marked pronunciation, Cyrillic
-              transliteration, part of speech, natural EN/RU example sentences, Word
-              Genome, Emotional DNA and brand fit.
+              transliteration, part of speech, natural EN/RU example sentences, a
+              morphological word family, imagined lineage, semantic relations, a Lexical
+              Discovery Score and a layered collision read.
             </div>
           </article>
+        </div>
+
+        <div class="wl-prose">
+          <span class="wl-kicker wl-grad-text reveal">Two modes, one pipeline</span>
+          <h2 class="wl-h2 reveal">Discover a meaning, or name a thing.</h2>
+          <p class="reveal">
+            The same discovery-and-selection pipeline runs underneath two modes; only the
+            analysis framing and the result copy change.
+            <strong>Discover a meaning</strong> is the primary mode — for unnamed human
+            experiences, tuned for semantic precision and natural usage.
+            <strong>Name something</strong> is for a company, store, brand, product or a
+            newborn: it switches to a brand-safety scoring path where any collision with
+            an existing word is disqualifying, and every candidate carries a
+            clearance-dominant safety read.
+          </p>
         </div>
       </div>
     </section>
@@ -205,6 +237,14 @@
             <h3>Progressive enhancement</h3>
             <p>Deterministic results paint first; bespoke per-word meanings and usage sentences stream in afterwards. Fast by default, deep when the model is on.</p>
           </article>
+          <article class="wl-card reveal">
+            <h3>Population, not generation</h3>
+            <p>Each language breeds hundreds of candidate forms and lets selection pressure kill most of them. The engine reports the real census — bred, rejected, survived — instead of dressing every output up as a &ldquo;99.&rdquo;</p>
+          </article>
+          <article class="wl-card reveal">
+            <h3>Ontology-aware ranking</h3>
+            <p>Target-type detection reads the <em>kind</em> of thing asked for — a moment, a feeling, a person, a principle — and demotes candidates of the wrong kind, so a semantically-near but ontologically-wrong word can't win.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -234,13 +274,17 @@
             <h3>Labelled sources</h3>
             <p>An AI-read interpretation carries a &ldquo;Read by AI&rdquo; badge, distinct from the deterministic built-in engine. The user always knows which one spoke.</p>
           </article>
+          <article class="wl-card reveal">
+            <h3>Never &ldquo;collision-free&rdquo;</h3>
+            <p>Collision is reported in layers. The offline checks that <em>can</em> run — internal list, phonetic neighbours, short-word occupancy — are run; the external ones (trademark, domains, other languages) are marked &ldquo;not checked,&rdquo; never silently passed. The engine never claims a word is clear.</p>
+          </article>
         </div>
 
         <div class="wl-highlight reveal">
           <dl class="wl-highlight__stat">
             <div><dt class="wl-grad-text">2</dt><dd>living languages served — EN + RU</dd></div>
             <div><dt class="wl-grad-text">12</dt><dd>linguistic species in the engine</dd></div>
-            <div><dt class="wl-grad-text">36</dt><dd>engine tests kept green</dd></div>
+            <div><dt class="wl-grad-text">121</dt><dd>engine tests kept green</dd></div>
           </dl>
           <p>
             Every invented word ships with a spoken pronunciation guide and a Cyrillic
@@ -273,7 +317,7 @@
           </div>
           <div class="wl-stack__row">
             <span class="wl-stack__label">Serverless</span>
-            <ul class="wl-chips"><li>Vercel functions</li><li><code>/api/analyze</code></li><li><code>/api/meanings</code></li><li>maxDuration 60s</li></ul>
+            <ul class="wl-chips"><li>Vercel functions</li><li><code>/api/analyze</code></li><li><code>/api/meanings</code></li><li><code>/api/usage</code></li><li><code>/api/semantic-search</code></li><li><code>/api/collision</code></li><li>maxDuration 60s</li></ul>
           </div>
           <div class="wl-stack__row">
             <span class="wl-stack__label">Testing</span>
@@ -293,9 +337,13 @@
           The meaning-first engine, language discovery, genomes and Word Passports are
           done, the serverless LLM meaning analysis runs with a graceful fallback, and
           bespoke per-word meanings, pronunciation guides, Cyrillic transliteration and
-          natural EN/RU usage sentences all ship today. Next on the roadmap: independent
-          phonetic strategies, a transparent adoption test, and a personal lexicon to
-          save discovered concepts.
+          natural EN/RU usage sentences all ship today. Since then the lab has grown a
+          semantic gap search, a breed-and-select evolution model with an honest census,
+          a rule-based speech-adoption test, semantic phonology, morphological word
+          families, a navigable semantic network, an on-device personal lexicon, a
+          &ldquo;name something&rdquo; brand mode and a live key-free collision check.
+          Next on the roadmap: accounts with cross-device lexicon sync, live trademark
+          and domain clearance, and a semantic-precision axis for the fitness profile.
         </p>
         <p class="wl-role reveal">
           <strong>Role —</strong> Product owner + architect. Built in partnership with an

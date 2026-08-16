@@ -9,13 +9,27 @@ intersection of sensory experience, science and everyday wellbeing.
 
 ## Portfolio
 
+The portfolio is presented in two families on the home page.
+
+**Technology & consumer ventures**
+
 | Brand | Category |
 |-------|----------|
-| **Lezzgo2** | Food & social discovery |
+| **LezzGo2** | Live-map social |
 | **SŌMA** | Sensory sommelier |
-| **ingredients.help** | Ingredient transparency |
-| **DayBreak** | Wellbeing |
-| **Quantara** | Technology / data intelligence |
+| **Ingredient.help** | Scan & verdict — food, cosmetics, pet food |
+| **Daybreak** | Voice & AI planner |
+| **Quantara** | Market intelligence |
+| **Sianelara** | Institute of Meaning |
+
+**Art & culture**
+
+| Brand | Category |
+|-------|----------|
+| **Duke&Lume** | Digital art gallery |
+
+Duke&Lume is deliberately not filed with the ventures: it is a body of work, not a
+product, and it is judged on the work rather than on shipped features.
 
 ## Tech
 
@@ -25,13 +39,14 @@ host (GitHub Pages, Netlify, Cloudflare Pages, etc.).
 
 ```
 .
-├── index.html          # Single-page site
+├── index.html            # Home: hero, philosophy, portfolio grid, approach, contact
+├── brands/<brand>.html   # One case-study page per brand
 ├── styles/
-│   └── main.css        # All styles (design tokens, layout, components)
+│   ├── main.css          # Home-page styles (dark saffron theme)
+│   └── <brand>.css       # One stylesheet per brand — its own identity
 ├── scripts/
-│   └── main.js         # Mobile nav, scroll reveal, small enhancements
-└── assets/
-    └── favicon.svg      # Logo mark / favicon
+│   └── main.js           # Mobile nav, scroll reveal, small enhancements
+└── assets/               # Logos, marks, favicon, case-study imagery
 ```
 
 ## Run locally
@@ -68,7 +83,11 @@ processing.
   accent colour via the inline `style="--accent:#..."`.
 - **Colours & type** are defined as CSS custom properties at the top of
   `styles/main.css` (`:root`).
+- **Categories** are `.brand-group` blocks between the grids. A brand moves family
+  by moving its `<article>` into the other `.brand-grid`.
 - **Contact email** is set on the CTA button in the `#contact` section.
 
-> Brand descriptions are currently first-draft placeholders — replace them with
-> official copy as each brand's positioning is finalised.
+> **Copy is verified against the product repositories, not written from memory.**
+> When a repo and its case-study page disagree, the code wins. Label the real
+> stage plainly (concept / prototype / MVP / working product) and never claim a
+> feature the code doesn't have. See `HANDOFF.md` for the last verification pass.

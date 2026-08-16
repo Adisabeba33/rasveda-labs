@@ -102,7 +102,7 @@
       <div class="so-container">
         <div class="so-prose">
           <span class="so-kicker so-gold-text reveal">What it does</span>
-          <h2 class="so-h2 reveal">Six rooms in the tasting house.</h2>
+          <h2 class="so-h2 reveal">Eight rooms in the tasting house.</h2>
         </div>
 
         <div class="so-features">
@@ -167,6 +167,27 @@
               compare view that decomposes match scores by profile and by sense.
             </p>
           </article>
+
+          <article class="so-card reveal">
+            <span class="so-card__idx">07</span>
+            <h3>Two ways to arrive</h3>
+            <p>
+              A member can answer the questionnaire — or simply <em>describe</em> a
+              flower they loved, or an experience they had, and let the app infer the
+              profile from it. The inference is shown back, with its contradictions
+              named, before it becomes a taste identity.
+            </p>
+          </article>
+
+          <article class="so-card reveal">
+            <span class="so-card__idx">08</span>
+            <h3>Learn</h3>
+            <p>
+              Eight editorial pieces on how to read a flower — terpenes, sensory
+              families, why potency is the least interesting number on a label — in the
+              same sommelier voice as the verdicts.
+            </p>
+          </article>
         </div>
 
         <!-- sample match medallion -->
@@ -212,9 +233,23 @@
             <h3>Anonymous → registered, no migration</h3>
             <p>
               Every visitor gets a signed anonymous UUID cookie; profile, history
-              and audit log accumulate under it. Registering just sets username +
-              password hash on the same row. HMAC session tokens validate
-              in-process so a DB blip never silently logs a member out.
+              and audit log accumulate under it. Registering just sets username, email
+              and password hash on the same row, so nothing is lost. HMAC session tokens
+              validate in-process so a DB blip never silently logs a member out.
+              Verification and reset tokens are stored only as hashes, single-use and
+              expiring; deleting an account removes the row.
+            </p>
+          </article>
+
+          <article class="so-card reveal">
+            <span class="so-card__idx">E</span>
+            <h3>A gate before the door</h3>
+            <p>
+              The whole site sits behind a 21+ acknowledgement that states, before
+              anything else, what SŌMA is and isn&rsquo;t: an educational sensory
+              resource, not a seller, not affiliated with any dispensary, and it never
+              tells anyone where to buy. The acknowledgement is versioned, so the gate
+              returns if the disclaimer&rsquo;s substance changes.
             </p>
           </article>
 
@@ -290,6 +325,26 @@
           <span>Tailwind CSS</span><span>Prisma</span><span>PostgreSQL · Supabase</span>
           <span>OpenAI (optional)</span><span>node:test</span><span>lucide-react</span>
         </div>
+      </div>
+    </section>
+
+    <!-- STATUS -->
+    <section class="so-section so-section--tint">
+      <div class="so-container so-prose">
+        <span class="so-kicker so-gold-text reveal">Status</span>
+        <div class="reveal"><span class="so-status-badge">Functional MVP · pre real-menu validation</span></div>
+        <h2 class="so-h2 reveal">The tasting room works. The menus haven&rsquo;t been walked.</h2>
+        <p class="reveal">
+          Profiles, the match engine, the Blender, Harvest, Collection, Compare,
+          accounts and the audit log all run today, against a catalog of 895 curated
+          strains. What is <em>not</em> settled:
+        </p>
+        <ul class="so-roadmap reveal">
+          <li><strong>No validation against real dispensary menus at scale.</strong> The parser reads pasted text well; how it holds up across many real menus is untested.</li>
+          <li><strong>No payments and no membership tier.</strong> Everything is open.</li>
+          <li><strong>Curator notes are ours, not a panel&rsquo;s.</strong> They are written from published sensory descriptions, not from a blind tasting — and the app says a match is a sensory prediction, never a guarantee.</li>
+          <li><strong>Real quality still depends on grower, freshness, packaging date and storage,</strong> which no engine can read off a menu.</li>
+        </ul>
       </div>
     </section>
 

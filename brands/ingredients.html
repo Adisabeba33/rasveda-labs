@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ingredient.help — Food additives, in plain language · A Rasveda Labs brand</title>
-  <meta name="description" content="Ingredient.help explains food additives in plain language and lets you check how a combination interacts in the Laboratory — built on a deterministic, unit-tested rule engine and the honest principle that no data never means &quot;safe.&quot; A Rasveda Labs brand." />
+  <title>Ingredient.help — Scan any product, understand what you&rsquo;re really buying · A Rasveda Labs brand</title>
+  <meta name="description" content="Ingredient.help turns a phone into a label reader: point it at a barcode or an ingredient list — food, cosmetics or pet food — and get a score, a verdict and the reason behind it in twenty seconds. Built on a deterministic core and the honest principle that no data never means &quot;safe.&quot; A Rasveda Labs brand." />
   <meta name="theme-color" content="#f7f5ee" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Ingredient.help — Food additives, in plain language" />
-  <meta property="og:description" content="Look up any additive in plain language, then check how a combination interacts. No data never means &quot;safe.&quot;" />
+  <meta property="og:title" content="Ingredient.help — Scan any product. Understand what you're really buying." />
+  <meta property="og:description" content="A score, a verdict and the reason behind it — for food, cosmetics and pet food. No data never means &quot;safe.&quot;" />
   <meta property="og:site_name" content="Rasveda Labs" />
 
   <link rel="icon" type="image/png" href="../assets/rasveda-favicon.png?v=3" />
@@ -48,13 +48,13 @@
         </svg>
 
         <p class="ig-wordmark reveal">Ingredient<span class="dot">.</span>help</p>
-        <p class="ig-eyebrow reveal">Food additives, in plain language</p>
-        <h1 class="ig-hero__title reveal">Know what&rsquo;s really in your food.</h1>
+        <p class="ig-eyebrow reveal">Scan · Score · Verdict</p>
+        <h1 class="ig-hero__title reveal">Scan any product. Understand what you&rsquo;re really buying.</h1>
         <p class="ig-hero__lead reveal">
-          Look up any additive and read it in plain language — then drop two or more
-          into the <em>Laboratory</em> to see how they actually interact. Some pairings
-          are risky, some are helpful, and where nobody knows yet, the answer is an
-          honest &ldquo;unknown&rdquo; — never a comforting guess.
+          Point a camera at a barcode or an ingredient list — or just type a brand — and
+          get back a score, a verdict, and the reason behind it. Food, cosmetics and pet
+          food, each read through its own lens. The target is <em>twenty seconds</em> from
+          scan to decision.
         </p>
 
         <div class="ig-hero__actions reveal">
@@ -68,8 +68,8 @@
 
         <dl class="ig-meta reveal" aria-label="Project details">
           <div><dt>Role</dt><dd>Product · Content · Full-stack engineering</dd></div>
-          <div><dt>Stack</dt><dd>Next.js 14 · React 18 · TypeScript · Supabase</dd></div>
-          <div><dt>Status</dt><dd>Working MVP</dd></div>
+          <div><dt>Stack</dt><dd>Next.js 14 · React 18 · TypeScript · Supabase · Claude</dd></div>
+          <div><dt>Status</dt><dd>Working product · catalog still small</dd></div>
         </dl>
       </div>
     </section>
@@ -78,94 +78,242 @@
     <section class="ig-section">
       <div class="ig-container ig-prose">
         <span class="ig-kicker reveal">The idea</span>
-        <h2 class="ig-h2 reveal">A label you can actually read.</h2>
+        <h2 class="ig-h2 reveal">The scanner is the product.</h2>
         <p class="reveal">
-          The back of a food package is a wall of E-numbers and chemistry. Most
-          &ldquo;is this bad for me?&rdquo; answers online are either fear-mongering or
-          hand-waving. Ingredient.help sits in the middle: a hand-curated catalog of
-          food additives, each explained across five plain-language sections —
-          <strong>Origin, Usage, Safety, Properties</strong> and
-          <strong>Regulation</strong> — with real ADI values, IARC classifications and
-          regulatory notes, written for a person, not a chemist.
+          An ingredient list is a legal document printed in six-point type, written for a
+          regulator and handed to a shopper who has thirty seconds and no chemistry
+          degree. This project began as an encyclopedia of additives with a Laboratory for
+          mixing them — and both still work — but they were the wrong front door. Somebody
+          standing in an aisle holding a tin of cat food had no idea what the site was for.
         </p>
         <p class="reveal">
-          But an ingredient rarely acts alone. The product&rsquo;s real question is what
-          happens when additives <em>meet</em> — and that&rsquo;s the Laboratory.
+          The identity is now singular. <strong>The scanner is the way in.</strong> The
+          ingredient database is the <em>engine</em> underneath it — 325 pages exist so
+          that a scan can mean something, not so people can browse them. And the generated
+          report is a recommendation about <em>this product</em>, never an encyclopedia
+          entry: standing facts about an ingredient belong on that ingredient&rsquo;s page,
+          and the report is forbidden from repeating them.
         </p>
 
         <div class="ig-callout reveal">
           <p class="ig-callout__mark">The founding principle</p>
-          <p>No data <em>never</em> means &ldquo;safe.&rdquo; When a combination isn&rsquo;t
-          in the evidence, the app says <em>unknown</em> — out loud.</p>
+          <p>No data <em>never</em> means &ldquo;safe.&rdquo; Where the evidence is
+          missing, the app says <em>no known data</em> — out loud, and never anything
+          more comforting.</p>
         </div>
       </div>
     </section>
 
-    <!-- WHAT IT DOES -->
+    <!-- SIGNATURE: THE TWENTY-SECOND LADDER -->
     <section class="ig-section ig-section--tint">
       <div class="ig-container">
         <div class="ig-prose">
-          <span class="ig-kicker reveal">What it does</span>
-          <h2 class="ig-h2 reveal">Four things, done honestly.</h2>
+          <span class="ig-kicker reveal">The answer</span>
+          <h2 class="ig-h2 reveal">Twenty seconds, in a fixed order.</h2>
+          <p class="reveal">
+            A reader is assumed to have twenty seconds, not five minutes. Every screen
+            answers questions in the same order, so stopping early still leaves you with
+            an answer rather than a pile of facts.
+          </p>
+        </div>
+
+        <article class="ig-scan reveal" aria-label="Example scan result">
+          <span class="ig-scan__lens">🐾 Read as pet food · auto-detected · cat</span>
+
+          <div class="ig-scan__head">
+            <span class="ig-scan__score">78<small>/100</small></span>
+            <span class="ig-scan__band">Good</span>
+          </div>
+
+          <p class="ig-scan__verdict">
+            A solid everyday wet food for an adult cat, held back by one vague
+            protein line.
+          </p>
+
+          <span class="ig-scan__step">Why — four points, one line each</span>
+          <ul class="ig-scan__points">
+            <li><b>Strongest</b><span>Named muscle meat leads the list, before any water or broth.</span></li>
+            <li><b>Weakness</b><span>&ldquo;Meat and animal derivatives&rdquo; hides which species it came from.</span></li>
+            <li><b>Safety</b><span>No pet hazards found; no onion, garlic or propylene glycol.</span></li>
+            <li><b>Bottom line</b><span>Good enough to feed daily; better options exist at the same price.</span></li>
+          </ul>
+
+          <div class="ig-scan__fold">
+            <span aria-hidden="true">▸</span> The working — score breakdown, dry-matter
+            figures, every matched ingredient, the tokens we couldn&rsquo;t place
+          </div>
+        </article>
+
+        <p class="ig-scan__caption reveal">
+          An illustration of the shape, not a real product&rsquo;s result. The score is
+          <strong>arithmetic</strong>: a model rates five observable factors 0–10 at
+          temperature 0, and fixed weights turn those into the number. It is never a
+          figure the model picks.
+        </p>
+      </div>
+    </section>
+
+    <!-- THE THREE LENSES -->
+    <section class="ig-section">
+      <div class="ig-container">
+        <div class="ig-prose">
+          <span class="ig-kicker reveal">Three lenses</span>
+          <h2 class="ig-h2 reveal">The same label asks three different questions.</h2>
+          <p class="reveal">
+            The app reads the label and decides which question it is being asked, then
+            says what it decided — with a one-tap override, because a wrong lens makes the
+            whole verdict wrong.
+          </p>
         </div>
 
         <div class="ig-features">
           <article class="ig-card reveal">
             <span class="ig-card__idx">01</span>
-            <h3>Plain-language catalog</h3>
+            <h3>Human food</h3>
             <p>
-              30 curated additives (E-numbers) across 8 categories — preservatives,
-              sweeteners, colorants, thickeners, acidulants, antioxidants, emulsifiers,
-              flavor enhancers — each with formula, concern level, aliases and the
-              five-section explainer. Pages are statically generated.
+              The allergen verdict: the label read against <em>your own</em> profile,
+              stored on your device and never sent anywhere. 19 allergens, with the
+              sensitivity flags that change what counts.
             </p>
           </article>
 
           <article class="ig-card reveal">
             <span class="ig-card__idx">02</span>
-            <h3>The Laboratory</h3>
+            <h3>Cosmetics (INCI)</h3>
             <p>
-              Add two or more additives, press Analyze, and a deterministic engine
-              checks 20 documented interaction rules — surfacing the single
-              highest-risk finding, from harmful reactions to intentional beneficial
-              synergies. Your bench persists locally between visits.
+              377 INCI names recognised and grouped by function, across 20 concern classes
+              — parabens, sulfates, fragrance allergens, formaldehyde releasers, UV
+              filters. Framed as <em>worth knowing</em>, never as <em>unsafe</em>.
             </p>
           </article>
 
           <article class="ig-card reveal">
             <span class="ig-card__idx">03</span>
-            <h3>Search that doesn&rsquo;t guess</h3>
+            <h3>Pet food</h3>
             <p>
-              An exact-match resolver for names, E-numbers and synonyms sits on top of
-              fuzzy search, so &ldquo;sorbate&rdquo; returns an honest
-              <em>ambiguous</em> (E200 vs E202) rather than silently picking one.
-              Typo-tolerant, never over-confident.
+              10 pet hazards, each naming the species affected. Two further facts are
+              established first — cat or dog, and dry or wet — each needing two
+              independent confirmations before it is trusted.
             </p>
           </article>
 
           <article class="ig-card reveal">
             <span class="ig-card__idx">04</span>
-            <h3>Save &amp; revisit</h3>
+            <h3>Why the lens decides everything</h3>
             <p>
-              Sign in (optional) to save combinations and keep a recently-viewed
-              history — each saved analysis frozen as an immutable snapshot, so it stays
-              explainable even after the rules are updated.
+              A cat is an obligate carnivore and a dog is not, so the same recipe earns
+              different verdicts. Form matters too: wet food lists water by weight, kibble
+              structurally needs binder starch. Guess either wrong and you get confident
+              nonsense.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- SIGNATURE: THE LABORATORY -->
-    <section class="ig-section">
+    <!-- THREE WAYS IN -->
+    <section class="ig-section ig-section--tint">
       <div class="ig-container">
         <div class="ig-prose">
-          <span class="ig-kicker reveal">The Laboratory</span>
-          <h2 class="ig-h2 reveal">Two additives in. One clear verdict out.</h2>
+          <span class="ig-kicker reveal">Getting in</span>
+          <h2 class="ig-h2 reveal">Three entrances, one pipeline.</h2>
           <p class="reveal">
-            Every result rides a four-step risk meter — <span class="ig-mono">Low →
-            Moderate → Elevated → High</span> — plus a distinct state for
-            &ldquo;unknown.&rdquo; Two real examples the engine actually encodes:
+            Barcode, photo, or a typed brand name. A barcode is a <em>shortcut to the
+            ingredient text</em>, never a different code path — searching a brand simply
+            resolves to a barcode and hands over. That is why three entrances can&rsquo;t
+            drift into three different answers about one product.
+          </p>
+        </div>
+
+        <div class="ig-features">
+          <article class="ig-card reveal">
+            <span class="ig-card__idx">A</span>
+            <h3>Every browser is covered</h3>
+            <p>
+              The native barcode detector where it exists, ZXing everywhere else — all iOS
+              browsers are WebKit, so even iOS Chrome needs it — and a keypad over the
+              live preview for a code that will never decode: scratched, curved,
+              shrink-wrapped.
+            </p>
+          </article>
+
+          <article class="ig-card reveal">
+            <span class="ig-card__idx">B</span>
+            <h3>Our own camera, not the phone&rsquo;s</h3>
+            <p>
+              The OS camera photographs a whole packet with the list as a small block
+              inside it. Here the list is framed <em>before</em> the shutter, then cropped
+              and compressed on the device — the upload is the list at 1600px, not the bag
+              at 4000px.
+            </p>
+          </article>
+
+          <article class="ig-card reveal">
+            <span class="ig-card__idx">C</span>
+            <h3>A bad read never becomes data</h3>
+            <p>
+              Every read is scored for quality. A poor one is declared before any verdict
+              is drawn from it, is never auto-saved to the shared catalog and never keys a
+              shared report — so one blurry photo can&rsquo;t poison a product for
+              everybody else.
+            </p>
+          </article>
+
+          <article class="ig-card reveal">
+            <span class="ig-card__idx">D</span>
+            <h3>The fallback is the edge</h3>
+            <p>
+              Three tiers of trust — our verified catalog, community readings, then the
+              open databases — and a write never buries a better one. When nobody knows
+              the code, the label gets read anyway. Barcode-only apps go blank exactly
+              when a shopper needs an answer most.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE PET WEDGE -->
+    <section class="ig-section">
+      <div class="ig-container ig-prose">
+        <span class="ig-kicker reveal">The sharpest wedge</span>
+        <h2 class="ig-h2 reveal">A tin at 11% protein beats a bag at 30%.</h2>
+        <p class="reveal">
+          Pet labels print a &ldquo;Guaranteed Analysis&rdquo; that is
+          <strong>not comparable between products</strong>: four fifths of the tin is
+          water, and the percentages are of the pack. Nobody does that arithmetic in an
+          aisle, and almost nobody knows it needs doing.
+        </p>
+        <p class="reveal">
+          So the Laboratory carries a second bench that puts up to four pet foods on one
+          scale. When the pack that <em>looks</em> highest in protein isn&rsquo;t the one
+          that <em>is</em>, the screen says so in a sentence — that is a fact about the
+          arithmetic, not an opinion about the food. It also offers grams per 100 kcal,
+          because an animal eats to its calorie need, and carbohydrate by difference,
+          which no pet food label prints anywhere.
+        </p>
+        <p class="reveal">
+          Every figure is divided out of numbers printed on the pack. No model is asked,
+          nothing missing is estimated, and any of it can be checked by hand in front of
+          the tin. A pack that doesn&rsquo;t print its moisture is left off the scale
+          rather than given a typical value for its form. Nothing is ranked: more protein
+          is not better for a cat in renal failure.
+        </p>
+      </div>
+    </section>
+
+    <!-- THE LABORATORY + DIARY -->
+    <section class="ig-section ig-section--tint">
+      <div class="ig-container">
+        <div class="ig-prose">
+          <span class="ig-kicker reveal">The Laboratory &amp; the diary</span>
+          <h2 class="ig-h2 reveal">What a single label can never tell you.</h2>
+          <p class="reveal">
+            A report reads one label. It can say a drink carries two sweeteners; it
+            cannot say that the benzoate in the drink met the ascorbic acid in the salami
+            four hours earlier. That pairing exists only in the day — so the diary looks
+            for it, and the Laboratory explains it. <strong>214 documented rules</strong>,
+            engine v1.17.0, on a four-step meter:
           </p>
         </div>
 
@@ -193,22 +341,23 @@
             </div>
             <p class="ig-reaction__why">
               Together, and especially with <em>heat or light</em>, benzoate and vitamin C
-              can react to form benzene, a known carcinogen. Condition-gated, but flagged
-              even when conditions are unstated — at reduced confidence.
+              can react to form benzene. Condition-gated, but flagged even when conditions
+              are unstated — at reduced confidence. The highest matched pair wins; a real
+              risk is never averaged into a comfortable middle.
             </p>
           </article>
 
           <!-- beneficial -->
-          <article class="ig-reaction reveal" aria-label="Guar gum plus xanthan gum analysis">
+          <article class="ig-reaction reveal" aria-label="Tea plus iron-rich meal analysis">
             <div class="ig-reaction__row">
-              <span class="ig-pill">Guar gum <small>E412</small></span>
+              <span class="ig-pill">Tea <small>polyphenols</small></span>
               <span class="ig-plus" aria-hidden="true">+</span>
-              <span class="ig-pill">Xanthan gum <small>E415</small></span>
+              <span class="ig-pill">Porridge <small>non-haem iron</small></span>
               <span class="ig-arrow" aria-hidden="true">→</span>
             </div>
             <div class="ig-verdict">
-              <span class="ig-verdict__label">Synergistic thickening</span>
-              <span class="ig-verdict__tag" data-risk="beneficial">Beneficial</span>
+              <span class="ig-verdict__label">Lowers iron absorption from that meal</span>
+              <span class="ig-verdict__tag" data-risk="unknown">Low</span>
             </div>
             <div class="ig-meter" aria-hidden="true">
               <span class="ig-meter__seg is-peak" data-on="low"></span>
@@ -220,9 +369,11 @@
               <span>Low</span><span>Moderate</span><span>Elevated</span><span>High</span>
             </div>
             <p class="ig-reaction__why">
-              Not every interaction is a warning. These two gums <em>reinforce</em> each
-              other, giving more viscosity together than apart — an intended pairing, and
-              the meter says so plainly.
+              Eight everyday foods are in the catalog — not because they&rsquo;re common,
+              but because each takes part in a documented interaction. And the
+              <em>claims stay the size of the evidence</em>: tea with a meal measurably
+              lowers that meal&rsquo;s iron, and does not give anyone anaemia. A test fails
+              if any food rule is filed above low risk.
             </p>
           </article>
         </div>
@@ -230,31 +381,38 @@
     </section>
 
     <!-- UNDER THE HOOD -->
-    <section class="ig-section ig-section--tint">
+    <section class="ig-section">
       <div class="ig-container">
         <div class="ig-prose">
           <span class="ig-kicker reveal">Under the hood</span>
-          <h2 class="ig-h2 reveal">Built to stay honest.</h2>
+          <h2 class="ig-h2 reveal">If it can be counted, it is counted.</h2>
+          <p class="reveal">
+            The rule everywhere in this codebase. The score is arithmetic. The diary is
+            arithmetic. The comparison chart is arithmetic. Interaction findings come from
+            a rules engine, not a prompt. A model gets exactly two jobs: reading text off a
+            photograph, and writing prose about facts established before it was called.
+          </p>
         </div>
 
         <div class="ig-features">
           <article class="ig-card reveal">
             <span class="ig-card__idx">A</span>
-            <h3>Deterministic rule engine</h3>
+            <h3>The report is validated before you see it</h3>
             <p>
-              A pure, unit-tested function evaluates 20 rules with pair, set and category
-              scopes. Same inputs → same verdict, every time. No model in the loop, no
-              black box — the reasoning is inspectable.
+              Structural faults are removed — an audience group about the wrong animal, a
+              marketing claim with no claim in it. Prose faults earn exactly one corrective
+              retry: discussing the wrong species, or a verdict whose confidence
+              contradicts its own score.
             </p>
           </article>
 
           <article class="ig-card reveal">
             <span class="ig-card__idx">B</span>
-            <h3>Conditions, weighted</h3>
+            <h3>Cached by product, not by user</h3>
             <p>
-              Rules can be gated on heat, pH, light or personal sensitivity. When context
-              is missing, a gated rule still surfaces — at halved confidence — so a real
-              risk is never silently hidden.
+              Four cache layers keyed by barcode, ingredient fingerprint or pair. The first
+              reader of a product pays; everyone after them reads it instantly for nothing.
+              The bill scales with the <em>catalog</em>, not with traffic.
             </p>
           </article>
 
@@ -262,22 +420,62 @@
             <span class="ig-card__idx">C</span>
             <h3>Immutable, versioned snapshots</h3>
             <p>
-              Every analysis stamps its <code>engineVersion</code> and
-              <code>rulesVersion</code> and freezes the ingredients it used. Old saved
-              results stay explainable even after the rulebook moves on.
+              Every saved analysis stamps its <code>engineVersion</code> and
+              <code>rulesVersion</code> and freezes what it used, so an old result stays
+              explainable after the rulebook moves on.
             </p>
           </article>
 
           <article class="ig-card reveal">
             <span class="ig-card__idx">D</span>
-            <h3>Ambiguity over guessing</h3>
+            <h3>It boots with nothing configured</h3>
             <p>
-              The name resolver returns <code>exact</code>, <code>ambiguous</code> or
-              <code>none</code> — the seam a future label-scanner will lean on to avoid
-              confidently misreading a package.
+              No API keys at all and the catalog, ingredient pages, Laboratory and
+              on-device OCR still work. Each key adds a capability; its absence is handled
+              explicitly rather than as a crash.
+            </p>
+          </article>
+
+          <article class="ig-card reveal">
+            <span class="ig-card__idx">E</span>
+            <h3>Privacy is structural</h3>
+            <p>
+              The diary, the allergen profile and the lab bench live in the browser and
+              never leave it. Scanning has never required an account. The coverage corpus
+              that tells us what to add next carries no image and no identity.
+            </p>
+          </article>
+
+          <article class="ig-card reveal">
+            <span class="ig-card__idx">F</span>
+            <h3>Two people, one URL</h3>
+            <p>
+              A shopper gets an answer; an operator gets catalog tooling. The split is
+              presentational and says so in the code — every write to the shared database
+              is checked again server-side, where a hidden button is no defence.
             </p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- COUNTED -->
+    <section class="ig-section ig-section--tint">
+      <div class="ig-container ig-prose">
+        <span class="ig-kicker reveal">Counted, not claimed</span>
+        <h2 class="ig-h2 reveal">The data assets.</h2>
+        <p class="reveal">
+          Every figure below is counted from the repository as it stands today.
+        </p>
+
+        <dl class="ig-figures reveal" aria-label="Data assets">
+          <div><dt>325</dt><dd>ingredient pages — 317 E-numbered, 8 base foods</dd></div>
+          <div><dt>214</dt><dd>documented interaction rules (engine v1.17.0)</dd></div>
+          <div><dt>800+</dt><dd>everyday foods recognised and grouped</dd></div>
+          <div><dt>377</dt><dd>INCI cosmetic names, in 12 functional groups</dd></div>
+          <div><dt>19 · 10 · 20</dt><dd>allergens · pet hazards · cosmetic concern classes</dd></div>
+          <div><dt>1,115</dt><dd>automated tests across 94 files</dd></div>
+        </dl>
       </div>
     </section>
 
@@ -290,8 +488,9 @@
           Warm paper, ink-green text and a calm sage-and-mint accent — clinical enough to
           feel trustworthy, soft enough to feel human. Headings in
           <strong>Fraunces</strong>, body in <strong>Inter</strong>. The risk scale is a
-          fixed, color-blind-considered ramp from sage to clay so a verdict reads the same
-          way every time.
+          fixed, colour-blind-considered ramp from sage to clay so a verdict reads the same
+          way every time — and the verdict panel takes the rating <em>label</em>, not the
+          score, so it can never re-band at its own thresholds.
         </p>
 
         <div class="ig-palette reveal" aria-label="Core palette">
@@ -317,18 +516,21 @@
         <span class="ig-kicker reveal">The build</span>
         <h2 class="ig-h2 reveal">Stack.</h2>
         <p class="reveal">
-          Next.js 14 (App Router · React 18) with TypeScript and Tailwind. The catalog and
-          engine run fully client-side with <strong>no backend required</strong>; Supabase
-          is optional, adding email/password accounts, saved combinations and view history.
-          Zustand persists the Laboratory bench, Fuse.js powers fuzzy search, and Vitest
-          covers the deterministic core. There is <em>no AI</em> in the product today —
-          label OCR and generated explanations are deliberately marked as future work, not
-          shipped as claims.
+          Next.js 14 (App Router · React 18) with TypeScript and Tailwind, on Supabase
+          with row-level security on every shared table — all of it written server-side
+          with a service key, so nothing shared is reachable from a browser. Label reading
+          runs on Google Vision or on-device Tesseract; barcodes on the native detector or
+          ZXing. Claude writes the report and the comparison, on Haiku by default, with the
+          model name deciding whether a thinking block and structured outputs are used at
+          all. Vitest covers the deterministic core, and CI runs typecheck, tests and build
+          on every push.
         </p>
         <div class="ig-stack reveal" aria-label="Technologies">
           <span>Next.js 14</span><span>React 18</span><span>TypeScript</span>
-          <span>Tailwind CSS</span><span>Zustand</span><span>Fuse.js</span>
-          <span>Supabase (optional)</span><span>Vitest</span>
+          <span>Tailwind CSS</span><span>Supabase (RLS)</span>
+          <span>Claude (Anthropic SDK)</span><span>Google Vision</span>
+          <span>Tesseract.js</span><span>ZXing</span><span>Zustand</span>
+          <span>Fuse.js</span><span>Vitest</span>
         </div>
       </div>
     </section>
@@ -337,19 +539,20 @@
     <section class="ig-section">
       <div class="ig-container ig-prose">
         <span class="ig-kicker reveal">Status</span>
-        <div class="reveal"><span class="ig-status-badge">Working MVP</span></div>
-        <h2 class="ig-h2 reveal">Real core, honest roadmap.</h2>
+        <div class="reveal"><span class="ig-status-badge">Working product · catalog still small</span></div>
+        <h2 class="ig-h2 reveal">Everything above is shipped. Here&rsquo;s what isn&rsquo;t.</h2>
         <p class="reveal">
-          The catalog, search, Laboratory and the deterministic engine all work today,
-          with the interaction core covered by unit tests. Accounts and saved history are
-          wired through Supabase. What&rsquo;s <em>not</em> built yet — and isn&rsquo;t
-          pretended to be:
+          Three scan routes, three lenses, the report, comparison, the dry-matter shelf,
+          the ingredient database, the Laboratory, the diary with period recaps, product
+          pages, discovery and confirmation, the contribution ledger and the admin tooling
+          all work today, alongside a separate capture app that fills the verified catalog.
+          What is <em>not</em> done — and isn&rsquo;t pretended to be:
         </p>
         <ul class="ig-roadmap reveal">
-          <li>Label OCR / photo scanning of ingredient lists</li>
-          <li>AI-generated explanations and barcode lookup</li>
-          <li>Product comparison and dietary-preference filtering</li>
-          <li>User settings (the table exists; the UI is still to be wired)</li>
+          <li><strong>Billing isn&rsquo;t wired.</strong> The credit ledger is complete and the price is chosen; no payment provider is integrated.</li>
+          <li><strong>The verified catalog is small.</strong> It grows by walking shops with the capture tool — labour, not engineering. This is the main gap between the product and its own promise.</li>
+          <li><strong>No mobile app.</strong> It is an installable, offline-capable PWA; the app stores are a distribution channel not yet used.</li>
+          <li><strong>No marketing has been done,</strong> so there is no user base to report.</li>
         </ul>
       </div>
     </section>
@@ -359,7 +562,7 @@
       <div class="ig-container">
         <p class="ig-cta__mark reveal" aria-hidden="true">⌕ ⚗ ⌕</p>
         <h2 class="ig-cta__title reveal">Choose with knowledge, not guesswork.</h2>
-        <p class="ig-cta__lead reveal">Ingredient.help is live — read your labels today.</p>
+        <p class="ig-cta__lead reveal">Ingredient.help is live — scan a pack today.</p>
         <div class="ig-cta__actions reveal">
           <a class="ig-btn" href="https://ingredient.help" target="_blank" rel="noopener">
             Visit ingredient.help <span aria-hidden="true">↗</span>

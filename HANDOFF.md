@@ -60,7 +60,7 @@ styles/<brand>.css      # One stylesheet per brand (its own identity)
 
 | Brand | Page | Verified vs code | Status on page |
 |-------|------|------------------|----------------|
-| **Duke&Lume** | `brands/dukelume.html` · `styles/dukelume.css` | ✅ **New this session.** Repo `Duke-lume`: Next.js 15 · React 19 · Tailwind **v4** · framer-motion · next-view-transitions. **49 works across 8 collections** (counted from `src/content/`; the repo README still says "thirty works" — the data wins). Every route built; Vitest content tests + Playwright e2e at desktop and 320px. Contact via Resend, degrading honestly without a key. Commerce fields exist in the model but are unset, and the artwork page prints only what is set | "Complete build · pre-launch" |
+| **Duke&Lume** | `brands/dukelume.html` · `styles/dukelume.css` | ✅ **New this session.** Repo `Duke-lume`: Next.js 15 · React 19 · Tailwind **v4** · framer-motion · next-view-transitions. **49 works across 8 collections** (counted from `src/content/`; the repo README still says "thirty works" — the data wins). Every route built; Vitest content tests + Playwright e2e at desktop and 320px. Contact via Resend, degrading honestly without a key. Commerce fields exist in the model but are unset, and the artwork page prints only what is set. **Live at `www.dukelume.com`** (confirmed by the founder — the sandbox proxy blocks outbound checks, so liveness cannot be curl-verified from a session) | "Live · dukelume.com" |
 
 **Portfolio count is 7.** Duke&Lume is filed separately on purpose — it is an art
 project, not a technology venture, and the two are judged by different measures.
@@ -182,9 +182,6 @@ fonts load fine on the live site).
 - **Re-verify LezzGo2, Daybreak and Quantara** when those repos are in session scope.
   They were not readable during the August 2026 sync and their pages are the oldest
   copy on the site.
-- Duke&Lume: the build is finished but not serving publicly. Once `dukelume.com` is
-  live, swap the card's "Site under development" note for a live link (same markup as
-  the other cards) and update the page's Status section.
 - Quantara: merge `claude/build-quantara-app-lSA0Y` to `main` and host it so the
   case-study page's "runs end-to-end" claim maps to a live deployment.
 - Custom domain (e.g. `rasveda.com`).

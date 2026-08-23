@@ -137,18 +137,6 @@ a { color: inherit; text-decoration: none; }
 }
 .dl-btn-ghost:hover { border-color: var(--dl-ink); }
 
-.dl-wip {
-  display: inline-flex; align-items: center; gap: 0.55em;
-  font-size: 0.86rem; color: var(--dl-ink-dim);
-  padding: 0.82em 0.2em;
-}
-.dl-wip__dot {
-  width: 7px; height: 7px; border-radius: 50%; flex: none;
-  background: var(--dl-bronze);
-  animation: dl-pulse 2s ease-in-out infinite;
-}
-@keyframes dl-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-
 .dl-meta {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -364,6 +352,13 @@ a { color: inherit; text-decoration: none; }
   content: "—";
   position: absolute; left: 0; color: var(--dl-bronze);
 }
+.dl-inline-link {
+  color: var(--dl-bronze-tx);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(139, 114, 82, 0.4);
+  transition: border-color 0.2s var(--dl-ease);
+}
+.dl-inline-link:hover { border-bottom-color: var(--dl-bronze); }
 
 /* ---------- CTA + footer ---------- */
 .dl-cta {

@@ -1,5 +1,17 @@
 # HANDOFF — Project state & notes for the next session
 
+> **Latest addition — PULSE (21 November 2026).** Added `brands/pulse.html`,
+> `styles/pulse.css` and the product's current mint P icon as
+> `assets/pulse-icon.png`. The home card and footer link to the case study;
+> its launch links use `https://talkie-pulse-app.fly.dev/`, the app named in
+> the product's Fly configuration. No custom PULSE domain was found in source.
+> Product copy was checked against `Adisabeba33/talkie-pulse-` at commit
+> `9ba3099e2a03c6340869a2dc5ed9b27c51f1aece`: README, default-skin tokens,
+> PWA manifest, floor control, walkie, pager, map, station, video and personal
+> chat encryption implementations. Status: **working web prototype / PWA**;
+> native apps are a further track. The radio visual is explicitly an illustration.
+> The earlier verification notes below remain historical context for the other brands.
+
 > **Read this first.** This is a self-contained brief so a fresh chat can pick up
 > without re-deriving context. It was last updated after the **portfolio-sync
 > session (August 2026)**, which re-verified the reachable product repos against
@@ -21,7 +33,7 @@ HTML/CSS/JS, no build step). Deployed to **GitHub Pages** on every push to
 `main`.
 
 The portfolio is split into **two families** on the home page: *Technology &
-consumer ventures* (six) and *Art & culture* (one — Duke&Lume). Each family is a
+consumer ventures* (seven) and *Art & culture* (one — Duke&Lume). Each family is a
 `.brand-group` heading followed by its own `.brand-grid`; a brand changes family
 by moving its `<article>` between the grids.
 
@@ -45,7 +57,7 @@ styles/<brand>.css      # One stylesheet per brand (its own identity)
 
 ## Current status of each brand
 
-### Family 1 — Technology & consumer ventures (6)
+### Family 1 — Technology & consumer ventures (7)
 
 | Brand | Page | Verified vs code | Status on page |
 |-------|------|------------------|----------------|
@@ -54,7 +66,9 @@ styles/<brand>.css      # One stylesheet per brand (its own identity)
 | **Ingredient.help** | `brands/ingredients.html` | ✅ **Re-verified — page rewritten, it had drifted furthest.** See the note below | "Working product · catalog still small" |
 | **Daybreak** | `brands/daybreak.html` | ⚠️ **Not verified this session** (repo out of scope). Last pass: React 18 · Vite · PWA; client-side, tested habit core; Claude Haiku voice parsing optional (bring-your-own key) | "MVP in personal testing" |
 | **Quantara** | `brands/quantara.html` | ⚠️ **Not verified this session** (repo out of scope). Last pass: full engine on branch `claude/build-quantara-app-lSA0Y`, **not on `main`** — 9 L1 detectors, ~8 L2 composers, matrix runner 5×3×3, null-test, two audits | "Site under development" |
+| **PULSE** | `brands/pulse.html` · `styles/pulse.css` | Verified 21 November 2026 against `talkie-pulse-`: Go server + JavaScript web client; floor-controlled PTT, pager, public waves and stations, code-gated map and optional speaker video; WebCrypto for personal-chat text/files | "Working web prototype · Installable PWA" |
 | **Sianelara** (engine codename *Word Laboratory*) | `brands/sianelara.html` · `styles/sianelara.css` | ✅ **Re-verified, page updated.** Repo `name-laboratory`, now **v0.54.0** (was v0.47.0). Pure-TS meaning-first engine, single `analyzeMeaning()` seam, seeded mulberry32 RNG; **284** tests green across 5 files (page previously said 121). 5 Vercel functions unchanged. **New since last pass:** per-language phonotactics *and* per-language grammatical morphology so each of the 12 species has its own accent; on-device lexicon de-duplication by form and by meaning (a first prototype of "proof of meaning"); **optional Supabase sign-in with cloud lexicon sync under RLS** (this was listed as roadmap on the old page — it has shipped); a measured Capacity benchmark instead of an asserted figure | "Engine + LLM passes run end-to-end" |
+
 
 ### Family 2 — Art & culture (1)
 
@@ -62,7 +76,7 @@ styles/<brand>.css      # One stylesheet per brand (its own identity)
 |-------|------|------------------|----------------|
 | **Duke&Lume** | `brands/dukelume.html` · `styles/dukelume.css` | ✅ **New this session.** Repo `Duke-lume`: Next.js 15 · React 19 · Tailwind **v4** · framer-motion · next-view-transitions. **49 works across 8 collections** (counted from `src/content/`; the repo README still says "thirty works" — the data wins). Every route built; Vitest content tests + Playwright e2e at desktop and 320px. Contact via Resend, degrading honestly without a key. Commerce fields exist in the model but are unset, and the artwork page prints only what is set. **Live at `www.dukelume.com`** (confirmed by the founder — the sandbox proxy blocks outbound checks, so liveness cannot be curl-verified from a session) | "Live · dukelume.com" |
 
-**Portfolio count is 7.** Duke&Lume is filed separately on purpose — it is an art
+**Portfolio count is 8** (seven technology ventures and one art house). Duke&Lume is filed separately on purpose — it is an art
 project, not a technology venture, and the two are judged by different measures.
 
 **Why ingredients.help was rewritten.** The old page described the product's *first*

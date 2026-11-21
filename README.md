@@ -18,6 +18,7 @@ The portfolio is presented in two families on the home page.
 | **LezzGo2** | Live-map social |
 | **SŌMA** | Sensory sommelier |
 | **Ingredient.help** | Scan & verdict — food, cosmetics, pet food |
+| **PULSE** | Social walkie-talkie — live voice, pager, team map & radio |
 | **Daybreak** | Voice & AI planner |
 | **Quantara** | Market intelligence |
 | **Sianelara** | Institute of Meaning |
